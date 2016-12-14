@@ -19,7 +19,7 @@ RUN mv /tmp/jdk1.8.0_111 /usr/lib/jvm/java-8-oracle/
 RUN update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-8-oracle/bin/java 300     
 RUN update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-8-oracle/bin/javac 300
 
-ENV JAVA_HOME /usr/lib/jvm/java-8-oracle/
+ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Install tomcat8
 RUN cd /tmp && curl -L 'http://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-8/v8.5.9/bin/apache-tomcat-8.5.9.tar.gz' | tar -xz
@@ -35,4 +35,4 @@ RUN chmod 755 /etc/init.d/tomcat8
 EXPOSE 8080
 
 # Define default command
-ENTRYPOINT service tomcat8 start && tail -f /opt/tomcat8/logs/catalina.out
+# ENTRYPOINT service tomcat8 start 

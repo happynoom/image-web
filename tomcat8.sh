@@ -1,4 +1,4 @@
-export JAVA_HOME=/usr/lib/java-8-oracle/
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export JAVA_OPTS="-Dfile.encoding=UTF-8 \
 -Dcatalina.logbase=/var/log/tomcatProd \
 -Dnet.sf.ehcache.skipUpdateCheck=true \
